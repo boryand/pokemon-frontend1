@@ -12,6 +12,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
 
 .App-header {
   background-color: #282c34;
@@ -35,4 +36,81 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container1,
+.container2,
+.container3 {
+  display: flex;
+
+  justify-content: center;
+  /* flex-wrap: wrap;
+  justify-content: center; */
+
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.child1,
+.child2,
+.child3 {
+  /* width: auto;
+  height: 500px; */
+
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+.navcontainer {
+  background-image: url("https://i.gifer.com/WLMd.gif");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: space-between;
+  height: 130px;
+  margin: 0 auto;
+}
+
+.navpaths {
+  font-size: 2rem;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.pokemon {
+  width: auto;
+  height: 250px;
+}
+
+.wrapper1 {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-gap: 150px;
+  margin: 0 auto;
+  
+}
+
+.box1 {
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper2 {
+  display: flex;
+  justify-content: space-evenly;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }

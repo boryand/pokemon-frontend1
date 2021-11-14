@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 import "./App.css";
-import {
-  BrowserRouter as Switch,
-  Route,
-  Link,
-  NavLink,
-} from "react-router-dom";
 import Names from "./components/nameslist";
+import GetById from "./components/getbyid";
+import Details from "./components/details";
+import Navbar from "./components/navbar";
+import Game from "./components/game"
+import { Link } from "react-router-dom";
+import Playing from "./components/playing";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Switch } from "react-router";
 
 function App() {
-  const [info, setInfo] = useState([]);
+  const [info, setInfo] = useState();
   // empty array is a truthy value !!
   useEffect(() => {
     fetch("https://bxb-project.herokuapp.com/pokemon")
@@ -32,10 +35,6 @@ function App() {
 
   //
 
-  const filteredNames = info.map((pokemon) => pokemon.name.english);
-  console.log(filteredNames);
-
-
   //  return(
   //   { info && info.name.english.map((names) => {
   //        <fragment>
@@ -46,12 +45,34 @@ function App() {
 
   //  )
   return (
-    <>
-      <Switch>
-        <Route path="/pokemon">{info.length > 0 && <Names info={info} />}
-        </Route>
-      </Switch>
-    </>
+    <div>
+    <ul className="navcontainer">
+      <li className="navpaths"> <Link to ="/"> HOME </Link></li>
+      <li className="navpaths"> <Link to ="/play">PLAY </Link>  </li>
+    </ul>
+
+    <Switch>
+      
+    <Route exact path="/play">
+        <Game info={info} />
+      </Route>
+      <Route exact path="/play/now">
+        <Playing info={info} />
+      </Route>
+
+      <Route exact path="/">
+        <Names info={info} />
+      </Route>
+
+      <Route exact path="/pokemon/:id">
+        <GetById info={info} />
+      </Route>
+
+      <Route exact path="/pokemon/:id/info">
+        <Details info={info} />
+      </Route>
+    </Switch>
+      </div>
   );
 }
 

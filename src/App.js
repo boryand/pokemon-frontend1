@@ -8,6 +8,7 @@ import Navbar from "./components/navbar";
 import Game from "./components/game"
 import { Link } from "react-router-dom";
 import Playing from "./components/playing";
+import Footer from "./components/footer";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Switch } from "react-router";
@@ -33,23 +34,10 @@ function App() {
       });
   }, []);
 
-  //
-
-  //  return(
-  //   { info && info.name.english.map((names) => {
-  //        <fragment>
-  //             <p>{names.name}</p>
-  //           </fragment>
-
-  //       });
-
-  //  )
+ 
   return (
     <div>
-    <ul className="navcontainer">
-      <li className="navpaths"> <Link to ="/"> HOME </Link></li>
-      <li className="navpaths"> <Link to ="/play">PLAY </Link>  </li>
-    </ul>
+  <Navbar />
 
     <Switch>
       
@@ -72,6 +60,7 @@ function App() {
         <Details info={info} />
       </Route>
     </Switch>
+    <Footer />
       </div>
   );
 }

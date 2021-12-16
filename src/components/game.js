@@ -133,7 +133,7 @@ const Game = ({ info }) => {
         <h1 className="ann1"> You choose to fight with : </h1>
           {playerOne && (
             <div>
-              <h1>{playerOne.name.english}</h1>
+              <h1 className="pl1">{playerOne.name.english}</h1>
             </div>
           )}
               <img className="img_12" src={lol} />
@@ -147,7 +147,7 @@ const Game = ({ info }) => {
           {playerOne && playerTwo && (
             <button className="btn1" onClick={handleFight}>FIGHT !</button>
           )}
-          {winner && <h2>And the winner is: {winner.name.english} </h2>}
+          {winner && <h2 className="winner">And the winner is: {winner.name.english} </h2>}
    
       </div>
     </div>

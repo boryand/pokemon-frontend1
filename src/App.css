@@ -44,36 +44,27 @@
   display: flex;
 
   justify-content: center;
-  /* flex-wrap: wrap;
-  justify-content: center; */
+ 
 
-  background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
 }
 
-.child1,
-.child2,
-.child3 {
+.child1
+{
+margin-top: 5%;
   /* width: auto;
   height: 500px; */
 
-  font-size: 2rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
 }
-
+/* NAVBAR STYLING */
 .navcontainer {
-  background-image: url("https://i.gifer.com/WLMd.gif");
+  background-image: url("https://i.pinimg.com/originals/01/47/b4/0147b4a7c7d81089d375d0b1ff3c2388.gif");
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-color: black;
 
   display: flex;
   justify-content: space-between;
-  height: 130px;
+  height: 100px;
   margin: 0 auto;
 }
 
@@ -81,30 +72,99 @@
   font-size: 2rem;
   margin: 0 auto;
   list-style-type: none;
+  
 }
+.aaa {
+color: #8E05C2;
 
+  font-family: "Playfair Display", serif;
+}
 .pokemon {
   width: auto;
   height: 250px;
+  cursor: pointer;
 }
+/* GAME STYLING  */
 
 .wrapper1 {
   display: grid;
-  grid-template-columns: 200px 200px;
+  /* justify-content: center;
+  flex-wrap: wrap; */
+  grid-template-columns: 200px 200px 200px;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+  align-content: center;
+
   grid-gap: 150px;
   margin: 0 auto;
-  
+  background-color: black;
+ 
+
 }
 
-.box1 {
-  
+.pk_names {
+  color: #8E05C2;
+  font-family: "Playfair Display", serif;
+ 
+}
+.box1{
+height: auto;
+width: auto;
+
+text-align: center;
+margin-top: 5%;
+}
+.button {
+  font-size: 2rem;
+  color: white;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+    animation: flicker 1.5s infinite alternate;    
+}
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+  20%, 24%, 55% {       
+    text-shadow: none;
+  }
 }
 
+.pokemon:hover{
+  filter: grayscale();
+}
+.box1:hover {
+ 
+
+}
 a {
   text-decoration: none;
 }
 
-.wrapper2 {
+.info11 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  color: #8E05C2
+  
+}
+
+/* .wrapper2 {
   display: flex;
   justify-content: space-evenly;
   background: rgb(238, 174, 202);
@@ -113,4 +173,140 @@ a {
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
+} */
+
+
+
+
+.bb1 {
+}
+
+/* FOOTER STYLING  */
+
+.footer {
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  color: #8E05C2
+ 
+}
+
+.items {
+  list-style-type: none;
+
+  font-family: "Playfair Display", serif;
+  margin-right: 20%;
+
+}
+.items1 {
+ margin-top: 3%;
+ line-height: 15px ;
+ 
+}
+
+
+/* LANDING PAGE STYILING  */
+.container1{
+background-color: black;
+
+}
+
+.items2{
+  list-style-type: none;
+margin-top: 5%;
+color: #8E05C2 ;
+font-size: 2rem;
+text-shadow: 1px 2px hsl(298, 100%, 83%) ;
+align-self: center;
+margin-right: 40%;
+
+}
+
+.item3 {
+  font-family: 'Playfair Display', serif;
+  color: #8E05C2 ;
+  text-shadow: 2px 2px #3E065F;
+  font-size: 3rem;
+}
+
+.item4{
+  font-family: 'Playfair Display', serif;
+  color: #8E05C2 ;
+  margin-left: 26%;
+  text-shadow: 1px 1px white;
+
+}
+.img123 {
+  align-self: flex-end;
+}
+/* PLAYING STYLING */
+.img_12 {
+
+
+}
+.bb {
+  display: flex;
+flex-direction: column;
+align-items: center;
+
+ background-color: black;
+ background-image: url(https://i.imgur.com/xh2lx3w.gif);
+ background-position: top;
+ background-repeat: no-repeat;
+ width: 1000px;
+  height: 670px;
+  text-align: center;
+  color: white
+}
+
+.ann1 {
+  font-family: 'Playfair Display', serif;
+}
+
+.btn1 {
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 14px;
+  z-index: 1;
+}
+
+
+.btn1:hover {
+  animation: animate 8s linear infinite;
+}
+ 
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+ 
+.btn1:before {
+
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: .5s;
+}
+ 
+.btn1:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
 }
